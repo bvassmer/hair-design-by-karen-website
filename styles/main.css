@@ -1,0 +1,656 @@
+html {background:#000; display:inline-block; overflow-y:hidden; height:100%; max-height:100%;}
+body {height:100%; width:100%;}
+
+body {
+	font-family: "Poiret One";
+	background-color: black;
+}
+
+h1 {
+	
+}
+
+h2 {
+	font-size: 56px;
+	padding-left: 10%
+}
+
+h3 {
+	font-size: 30px;
+}
+.resp_480,.resp_320,.resp_240 h3 {
+	font-size: 24px;
+}
+
+h4{
+	font-size: 18px;
+}
+.resp_480,.resp_320,.resp_240 h4 {
+	font-size: 18px;
+}
+
+
+
+.scroll_arrow {
+	height: 100px;
+	width: 100px;
+	background: url('/images/scroll_arrow.png') 0 0 no-repeat ;
+	background-origin: 0px 0px;
+	background-position-x: 0px;
+	background-position-y: 0px;
+	background-size:cover;
+	background-color: transparent;
+	text-align: center;
+}
+
+.scroll_arrow h3 {
+	padding-top: 20%;
+}
+#logo {
+	top:0;
+	left:0;
+	z-index: 200;
+
+}
+#bubbles {
+	top:-300px;
+	left:0px;
+	z-index: 199;
+	width:100%;
+}
+.cuts_button {
+	float: left;
+}
+.button_mobile {
+	margin-right: 10px;	
+}
+
+.cuts_button .downarrow {
+	display: block;
+	float: left;
+	padding-top:13px;
+}
+.cuts_button .uparrow {
+	display: none;
+	float: left;
+	padding-top:13px;
+}
+
+.color_button {
+	float: left;
+}
+.color_button .downarrow {
+	display: block;
+	float: left;
+	padding-top:13px;
+}
+.color_button .uparrow {
+	display: none;
+	float: left;
+	padding-top:13px;
+}
+
+.style_button {
+	float: left;
+}
+.style_button .downarrow {
+	display: block;
+	float: left;
+	padding-top:13px;
+}
+.style_button .uparrow {
+	display: none;
+	float: left;
+	padding-top:13px;
+}
+
+
+#cuts_box {
+	display: block;
+	width: 150px;
+	float: left;
+}
+#color_box{
+	display: block;
+	width: 150px;
+	float: left;
+}
+#style_box{
+	display: block;
+	width: 150px;
+	float: left;
+}
+
+#nav {
+	background-color: black;
+	width:100%;
+	height:auto;
+	color: white;
+	position: fixed;
+	left:400px;
+	font-size: 30px;
+	z-index: 999;
+	top:0px
+}
+#nav a:link {
+	color: white;
+}
+#nav a:visited {
+	color: white;
+}
+#nav a:hover {
+	color: white;
+}
+#nav a:active {
+	color: white;
+}
+
+.nav_item {
+	margin-left: 10px;
+}
+
+#swipe_notice {
+	opacity: 0.7;
+	float:right;
+}
+
+.bubble_blur_5 {
+	left:5%;
+}
+.bubble_blur_30 {
+	left:30%;
+}
+.bubble_blur_55 {
+	left:55%;
+}
+.bubble_blur_65 {
+	left:65%;
+}
+.bubble_blur_70 {
+	left:70%;
+}
+
+.col_1 {
+	width:50%;
+	float: left;
+}
+.col_2 {
+	width:50%;
+	float: left;
+}
+
+.button_container {
+	position: relative;
+}
+#tap_ani1, #tap_ani2, #tap_ani3 {
+	position: absolute;
+	opacity: 0;
+}
+#tap_ani1 {
+	top:-20px;
+	left: 0px;
+}
+#tap_ani2 {
+	top:-20px;
+	left: 90px;
+}
+#tap_ani3 {
+	top:-20px;
+	left: 170px;
+}
+
+.prices {
+	width: 300px;
+	min-width: 200px;
+	position: absolute;
+	top: 390px;
+	z-index: 999;
+}
+.prices.cuts{
+	left: 8%;
+	opacity:0;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	/* Safari */
+	-webkit-transition-duration:0.5s;
+	-webkit-transition-timing-function:linear;
+}
+#page2m .prices.cuts{
+	left: 5px;
+	top: 200px;
+}
+.prices.color{
+	left: 22%;
+	opacity:0;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	/* Safari */
+	-webkit-transition-duration:0.5s;
+	-webkit-transition-timing-function:linear;
+}
+#page2m .prices.color{
+	left: 5px;
+	top: 200px;
+}
+
+.prices.style{
+	left: 37%;
+	opacity:0;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	/* Safari */
+	-webkit-transition-duration:0.5s;
+	-webkit-transition-timing-function:linear;
+}
+#page2m .prices.style{
+	left: 5px;
+	top: 200px;
+}
+
+.prices .title {
+	font-style: italic	
+}
+.prices .inset {
+	padding-left: 10px;
+	font-family: 14px !important;
+	line-height: 16px !important;
+}
+.left_col {
+	width: 75px;
+	min-width: 45px;
+	text-align: right;
+	float:left;
+	font-size: 13px;
+	line-height: 16px;
+}
+.right_col {
+	width: 215px;
+	min-width: 144px;
+	text-align: left;
+	float:left;
+	margin-left: 5px;
+	font-size: 16px;
+	line-height: 16px;
+}
+.buffer {
+	padding-bottom: 5px;
+}
+/* Page CSS */
+#page1, #page1m {
+	background: url('/images/brick_girl_1024.jpg') 50% 0 no-repeat ; /*fixed*/
+	background-size:cover;
+	height: 1620px;
+	width:100%;
+}
+#page2, #page2m {
+	background: url('/images/hands_cutting_1024.jpg') 50% 0 no-repeat ;
+	background-size:cover;
+	width:100%;
+	height: 1620px;
+	padding-top: 300px;
+}
+#page3, #page3m {
+	background: url('/images/calendar_pen_1024.jpg') 50% 0 no-repeat ;
+	background-size:cover;
+	width:100%;
+	height: 1620px;
+	padding-top: 300px;
+}
+#page4, #page4m {
+	background: url('/images/old_phone_1024.jpg') 50% 0 no-repeat ;
+	background-size:cover;
+	width:100%;
+	height: 1620px;
+	padding-top: 300px;
+}
+
+.imgmiddle {
+	vertical-align:middle;
+	margin-right: 10px;
+}
+
+.resp_full {
+	display:none;
+}
+.resp_980 {
+	display:none;
+}
+.resp_650 {
+	display:none;
+}
+.resp_480 {
+	display:none;
+}
+.resp_320 {
+	display:none;
+}
+.resp_240 {
+	display:none;
+}
+
+
+
+
+@media screen and (max-width: 980px) {
+	#bubbles {
+		display: none;
+	}
+	.resp_980 {
+		display:block;
+	}
+	#page1 {
+		background: url('/images/brick_girl_ph_960.jpg') 50% 0 no-repeat ; 
+	}
+	#page2 {
+		background: url('/images/hands_cutting_ph_480.jpg') 50% 0 no-repeat ; 
+	}
+	#page3 {
+		background: url('/images/calendar_pen_ph_480.jpg') 50% 0 no-repeat ; 
+	}
+	#page4 {
+		background: url('/images/old_phone_orig_ph_720.jpg') 50% 0 no-repeat ; 
+	}
+	#page1, #page2, #page3, #page4 {
+		padding-top: 150px;
+		background-size: contain;
+	}
+	h2 {
+		font-size: 48px;
+		padding-left: 0%
+	}
+
+}
+@media screen and (max-width: 650px) {
+	.resp_980 {
+		display:none;
+	}
+	.resp_650 {
+		display:block;
+	}
+	#nav {
+		display: none;
+	}
+	#page1m {
+		background: url('/images/karen_brick_wall_650.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:480px;
+	}
+	#page2m {
+		background: url('/images/hands_cutting_ph_480.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:480px;
+	}
+	#page3m {
+		background: url('/images/calendar_pen_ph_480.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:480px;
+	}
+	#page4m {
+		background: url('/images/old_phone_orig_ph_640.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:480px;
+	}
+}
+@media screen and (max-width: 480px) {
+	.resp_980 {
+		display:none;
+	}
+	.resp_650 {
+		display:none;
+	}
+	.resp_480 {
+		display:block;
+	}
+	#logo_bg {
+		display: none;
+	}
+	#nav {
+		display: none;
+	}
+	#page1m {
+		background: url('/images/karen_brick_wall_ph_480.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:960px;
+	}
+	#page2m {
+		background: url('/images/hands_cutting_ph_480.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:960px;
+	}
+	#page3m {
+		background: url('/images/calendar_pen_ph_480.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:960px;
+	}
+	#page4m {
+		background: url('/images/old_phone_orig_ph_480.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:960px;
+	}
+}
+@media screen and (max-width: 320px) {
+	.resp_980 {
+		display:none;
+	}
+	.resp_650 {
+		display:none;
+	}
+	.resp_480 {
+		display:none;
+	}
+	.resp_320 {
+		display:block;
+	}
+	#logo_bg {
+		display: none;
+	}
+	#nav {
+		display: none;
+	}
+	#page1m {
+		background: url('/images/karen_brick_wall_ph_320.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:640px;
+	}
+	#page2m {
+		background: url('/images/hands_cutting_ph_320.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:640px;
+	}
+	#page3m {
+		background: url('/images/calendar_pen_ph_320.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:640px;
+	}
+	#page4m {
+		background: url('/images/old_phone_orig_ph_320.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:640px;
+	}
+}
+@media screen and (max-width: 240px) {
+	.resp_980 {
+		display:none;
+	}
+	.resp_650 {
+		display:none;
+	}
+	.resp_480 {
+		display:none;
+	}
+	.resp_320 {
+		display:none;
+	}
+	.resp_240 {
+		display:block;
+	}
+	#logo_bg {
+		display: none;
+	}
+	#nav {
+		display: none;
+	}
+	#page1m {
+		background: url('/images/karen_brick_wall_ph_240.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:400px;
+	}
+	#page2m {
+		background: url('/images/hands_cutting_ph_240.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:400px;
+	}
+	#page3m {
+		background: url('/images/calendar_pen_ph_240.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:400px;
+	}
+	#page4m {
+		background: url('/images/old_phone_orig_ph_240.jpg') 50% 0 no-repeat ; 
+		padding-top:120px;
+		float:left;
+		display: inline;
+		height:400px;
+	}
+}
+
+@media screen and (min-width: 968px) {
+	#page1 {
+		background: url('/images/brick_girl_1280.jpg') 50% 0 no-repeat ; 
+	}
+	#page2 {
+		background: url('/images/hands_cutting_1280.jpg') 50% 0 no-repeat ; 
+	}
+	#page3 {
+		background: url('/images/calendar_pen_1280.jpg') 50% 0 no-repeat ; 
+	}
+	#page4 {
+		background: url('/images/old_phone_1280.jpg') 50% 0 no-repeat ; 
+	}
+	.resp_full {
+		display: block;
+	}
+}
+
+
+@media screen and (min-width: 1024px) {
+	#page1 {
+		background: url('/images/karen_brick_wall_ipad.jpg') 50% 0 no-repeat ; 
+	}
+	#page2 {
+		background: url('/images/karen_with_scissors_ipad.jpg') 50% 0 no-repeat ; 
+	}
+	#page3 {
+		background: url('/images/calendar_pen_ipad.jpg') 50% 0 no-repeat ; 
+	}
+	#page4 {
+		background: url('/images/old_phone_ipad.jpg') 50% 0 no-repeat ; 
+	}
+	#page1, #page2, #page3, #page4 {
+		background-size: contain;
+	}
+	.resp_full {
+		display: block;
+	}
+}
+@media screen and (min-width: 1280px) {
+	#page1 {
+		background: url('/images/karen_brick_wall_1600.jpg') 50% 0 no-repeat ; 
+	}
+	#page2 {
+		background: url('/images/karen_with_scissors_1600.jpg') 50% 0 no-repeat ; 
+	}
+	#page3 {
+		background: url('/images/calendar_pen_1600.jpg') 50% 0 no-repeat ; 
+	}
+	#page4 {
+		background: url('/images/old_phone_1600.jpg') 50% 0 no-repeat ; 
+	}
+	.resp_full {
+		display: block;
+	}
+}
+@media screen and (min-width: 1600px) {
+	#page1 {
+		background: url('/images/karen_brick_wall_1920.jpg') 50% 0 no-repeat ; 
+	}
+	#page2 {
+		background: url('/images/karen_with_scissors_1920.jpg') 50% 0 no-repeat ; 
+	}
+	#page3 {
+		background: url('/images/calendar_pen_1920.jpg') 50% 0 no-repeat ; 
+	}
+	#page4 {
+		background: url('/images/old_phone_1920.jpg') 50% 0 no-repeat ; 
+	}
+	.resp_full {
+		display: block;
+	}
+}
+@media screen and (min-width: 1920px) {
+	#page1 {
+		background: url('/images/karen_brick_wall_2560.jpg') 50% 0 no-repeat ; 
+	}
+	#page2 {
+		background: url('/images/karen_with_scissors_2560.jpg') 50% 0 no-repeat ; 
+	}
+	#page3 {
+		background: url('/images/calendar_pen_2560.jpg') 50% 0 no-repeat ; 
+	}
+	#page4 {
+		background: url('/images/old_phone_2560.jpg') 50% 0 no-repeat ; 
+	}
+	.resp_full {
+		display: block;
+	}
+}
+
+/* preloader */
+body{     
+display:none; 
+} 
+#jpreOverlay, #qLoverlay {     background-color:#000;     width:100%;     height:100%;     position:fixed;     top:0;     left:0;     z-index:11; } 
+#jpreSlide {     font-size:22px;     font-weight:700;     color:#FFF;     text-align:center;     width:100%; } 
+#jpreLoader, #qLloader {     
+width:320px;     
+height:200px;     
+background:url('/images/logo_plain_gray_320.png') 0 100% no-repeat;     
+position:fixed;     
+top:43%;     
+left:50%;     
+margin-left:0px;     
+margin-top: -300px; 
+} 
+#jpreBar, #qLbar {     width:800px;     height:0;     position:absolute;     bottom:0;     background:url('/images/logo_plain_320.png') 0 100% no-repeat;;
+ } 
+#jprePercentage, #qLpercentage {     color:#888;     text-align:center;     position:absolute;     height:30px;     width:100px;     margin-top: 40px; font-size:48px;} 
